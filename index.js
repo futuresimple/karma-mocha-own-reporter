@@ -52,6 +52,9 @@ var Reporter = function(baseReporterDecorator, formatError, reportSlowerThan, pl
 
         return {
             title: result.description,
+            titlePath: function() {
+                return result.suite.concat(result.description)
+            },
             fullTitle: function() {
 
                 return result.suite.concat(result.description).join(' ');
